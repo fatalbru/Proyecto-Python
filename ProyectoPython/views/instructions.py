@@ -13,12 +13,12 @@ def instructions() -> rx.Component:
             rx.text("- Puedes participar desde cualquier parte del mundo"),
             rx.text("- Solo tendras que hacer retwitt a la publicacion que enlazare desde esta web. Tu cuenta de Twitter/X tiene que ser publica."),
             button(
-                "Twitter",
+                "Github",
                 constants.GITHUB_URL
                 ),
             rx.text("- Al dia siguiente realizare el sorteo de forma publica en directo desde Twitch y Youtube"),
             button(
-                "Twitch",
+                "Youtube",
                 constants.YOUTUBE_URL
                 ),
             rx.text(
