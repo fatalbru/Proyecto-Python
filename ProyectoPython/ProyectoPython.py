@@ -3,6 +3,7 @@ import ProyectoPython.styles.styles as styles
 from ProyectoPython.styles.styles import Size
 from ProyectoPython.views.navbar import navbar
 from ProyectoPython.views.header import header
+from ProyectoPython.views.instructions import instructions
 from ProyectoPython.views.footer import footer
 def index() -> rx.Component:
     return rx.box(
@@ -10,6 +11,7 @@ def index() -> rx.Component:
     rx.center(
         rx.vstack(
             header(),
+            instructions(),
             footer(),
             width="100%",
             justify_content="center",  # Centrar los elementos dentro del stack

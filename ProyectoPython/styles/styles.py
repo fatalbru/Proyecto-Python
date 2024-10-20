@@ -9,6 +9,7 @@ class Size(Enum):
     MEDIUM= "0.8em"
     DEFAULT = "1em"
     BIG = "2em"
+    BUTTON = "2.75em"
     VERY_BIG = "4em"
     
 STYLESHEETS = [
@@ -34,10 +35,18 @@ BASE_STYLE = {
     },
     rx.text: {
         "font_size":Size.MEDIUM.value
+    },
+    rx.button:{
+       "margin_bottom": Size.DEFAULT.value,
+       "heigth": Size.BUTTON.value,
+       "color": f"{TextColor.SECONDARY.value} !important",
+       "_hover":{
+           "color": f"{TextColor.PRIMARY.value} !important"
+           
+       } 
     }
     
 }
-
 max_width_style = dict(
         align_items="center",
         padding_x=Size.BIG.value,
