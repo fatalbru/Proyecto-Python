@@ -1,9 +1,22 @@
 import reflex as rx
 import ProyectoPython.styles.styles as styles
+from ProyectoPython.styles.styles import Size
 from ProyectoPython.views.navbar import navbar
+from ProyectoPython.views.header import header
 def index() -> rx.Component:
     return rx.box(
-    navbar()
+    navbar(),
+    rx.center(
+        rx.vstack(
+            header(),
+            header(),
+            header(),
+            width="100%",
+            justify_content="center",  # Centrar los elementos dentro del stack
+            align_items="center", 
+            spacing=Size.VERY_BIG.value
+        )
+    )
         
     )
     

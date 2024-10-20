@@ -2,8 +2,10 @@ import reflex as rx
 from enum import Enum
 from .fonts import Font
 from .colors import Color, TextColor
+MAX_WIDTH="1000px"
 class Size(Enum):
     SMALL= "0.5em"
+    MEDIUM= "0.8em"
     DEFAULT = "1em"
     BIG = "2em"
     VERY_BIG = "4em"
@@ -16,6 +18,28 @@ STYLESHEETS = [
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "color": TextColor.PRIMARY.value,
-    "background": Color.PRIMARY.value
+    "background": Color.PRIMARY.value,
+    rx.heading: {
+        "font_family": Font.DEFAULT.value,
+        "color": TextColor.ACCENT.value
+    },
+    rx.link: {
+        "text_decoration": "none",
+        ":hover": {
+            "color": TextColor.ACCENT.value,
+            "text_decoration": "none"
+        }
+        
+    },
+    rx.text: {
+        "font_size":Size.MEDIUM.value
+    }
     
 }
+
+max_width_style = dict(
+        align_items="start",
+        padding_x=Size.BIG.value,
+        width="100%",
+        max_width=MAX_WIDTH
+)
