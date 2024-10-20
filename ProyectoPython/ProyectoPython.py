@@ -1,8 +1,9 @@
 import reflex as rx
 import ProyectoPython.styles.styles as styles
+from ProyectoPython.views.navbar import navbar
 def index() -> rx.Component:
     return rx.box(
-        
+    navbar()
         
     )
     
