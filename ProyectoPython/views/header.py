@@ -6,8 +6,9 @@ def header() -> rx.Component:
     return rx.vstack(
         rx.heading(
             "Calendario de aDEViento 2024",
-            size="lg",
-            padding_bottom=Size.DEFAULT.value
+            font_size=Size.BIG.value,
+            padding_bottom=Size.DEFAULT.value,
+            margin_bottom=Size.MEDIUM.value
             ),
         rx.flex(
             rx.image(
@@ -22,7 +23,7 @@ def header() -> rx.Component:
                     "24 dias. 24 regalos\n",
                     "Del 1 al 24 de diciembre",
                     class_name="nes-balloon from-left is-dark",
-                    size="lg"
+                    font_size="18px"
                 ),
                 rx.text(
                     "Por tercer año, !aqui esta el calendario de adviento sorpresa de nuestra ",
