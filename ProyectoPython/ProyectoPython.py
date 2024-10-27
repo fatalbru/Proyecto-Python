@@ -11,6 +11,7 @@ from ProyectoPython.views.footer import footer
 from ProyectoPython.components.github import github
 def index() -> rx.Component:
     return rx.box(
+        rx.script(src="/js/snow.js"),
     navbar(),
     rx.center(
         rx.vstack(
