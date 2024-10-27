@@ -6,6 +6,7 @@ from ProyectoPython.views.header import header
 from ProyectoPython.views.partners import partners
 from ProyectoPython.views.author import author
 from ProyectoPython.views.instructions import instructions
+from ProyectoPython.views.calendar import calendar
 from ProyectoPython.views.footer import footer
 def index() -> rx.Component:
     return rx.box(
@@ -14,6 +15,7 @@ def index() -> rx.Component:
         rx.vstack(
             header(),
             instructions(),
+            calendar(),
             author(),
             partners(),
             footer(),
