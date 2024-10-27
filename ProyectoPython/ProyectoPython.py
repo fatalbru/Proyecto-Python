@@ -8,6 +8,7 @@ from ProyectoPython.views.author import author
 from ProyectoPython.views.instructions import instructions
 from ProyectoPython.views.calendar import calendar
 from ProyectoPython.views.footer import footer
+from ProyectoPython.components.github import github
 def index() -> rx.Component:
     return rx.box(
     navbar(),
@@ -19,6 +20,7 @@ def index() -> rx.Component:
             author(),
             partners(),
             footer(),
+            github(),
             width="100%",
             justify_content="center",  # Centrar los elementos dentro del stack
             align_items="center", 
